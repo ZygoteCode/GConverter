@@ -1531,7 +1531,7 @@ public partial class MainForm : MetroForm
             Process.Start(new ProcessStartInfo
             {
                 FileName = "pngquant.exe",
-                Arguments = ffmpegPrepend + $"\"{gunaLineTextBox12.Text}\" --force --verbose --ordered --speed=1 --quality=50-90 %1",
+                Arguments = $"\"{gunaLineTextBox12.Text}\" --force --verbose --ordered --speed=1 --quality=50-90 %1",
                 UseShellExecute = false,
                 RedirectStandardOutput = true,
                 CreateNoWindow = true,
@@ -1835,7 +1835,6 @@ public partial class MainForm : MetroForm
         try
         {
             string post = gunaLineTextBox40.Text;
-            System.Windows.Forms.MessageBox.Show(post);
 
             if (post.StartsWith("http://"))
             {
@@ -3148,7 +3147,7 @@ public partial class MainForm : MetroForm
             Process.Start(new ProcessStartInfo
             {
                 FileName = "rubberband.exe",
-                Arguments = ffmpegPrepend + $"{command} \"{gunaLineTextBox61.Text}\" {threadCommand}\"{gunaLineTextBox60.Text}\"",
+                Arguments = $"{command} \"{gunaLineTextBox61.Text}\" \"{gunaLineTextBox60.Text}\"",
                 UseShellExecute = false,
                 RedirectStandardOutput = true,
                 CreateNoWindow = true,
